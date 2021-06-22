@@ -1,15 +1,17 @@
-function combine(input1: number | string, input2: number | string) {
-  let result;
-  if (typeof input1 === 'number' && typeof input2 === 'number') {
-    result = input1 + input2;
-  } else {
-    result = input1.toString() + ' ' + input2.toString();
-  }
-  return result;
+//never type
+let userInput: unknown;
+let userName: string;
+
+userInput = 5;
+userInput = 'Bryan';
+
+//doesn't work unknown is a bit more restrictive than any
+// userName = userInput;
+
+//never Type
+function generateError(message: string, code: number): never {
+  throw {message: message, errCode: code};
 }
 
-const combineAges = combine(30, 26);
-console.log(combineAges);
-
-const combineNames = combine('Bryan', 'Guilas');
-console.log(combineNames);
+const res = generateError('Error', 500)
+console.log(res);
