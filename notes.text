@@ -1,0 +1,10 @@
+TYPESCRIPT TYPES
+boolean
+number
+string
+array
+object
+tuple
+any
+union
+literal
