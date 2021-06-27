@@ -18,17 +18,16 @@ var Role;
     Role[Role["FULLSTACK"] = 2] = "FULLSTACK";
 })(Role || (Role = {}));
 ;
-var person = {
+const person = {
     name: 'Bryan',
     age: 30,
     hobbies: ['Cycling', 'Coding'],
     roll: Role.FRONTEND
 };
 console.log(person.roll);
-var favoriteFood;
+let favoriteFood;
 favoriteFood = ['Japanese', 'Korean'];
 console.log(favoriteFood);
-for (var _i = 0, _a = person.hobbies; _i < _a.length; _i++) {
-    var hobby = _a[_i];
+for (const hobby of person.hobbies) {
     console.log(hobby);
 }
