@@ -1,21 +1,30 @@
 "use strict";
-const helper = (str) => {
-    const hash = {};
-    for (let char of str.toLowerCase()) {
-        hash[char] ? hash[char]++ : hash[char] = 1;
-    }
-    return hash;
-};
-const isAnagram = (str1, str2) => {
-    if (str1.length !== str2.length)
-        return false;
-    const hash = helper(str1);
-    for (let char of str2) {
-        if (!hash[char])
-            return false;
-        else
-            hash[char] -= 1;
-    }
-    return true;
-};
-console.log(isAnagram('cinema', 'iceman'));
+////////////////////////////////////////////////////////////////////////////////////
+// interface Named {
+//   readonly name: string;
+// }
+//
+// interface Greetable extends Named {
+//   greet(phrase: string): void;
+// }
+//
+// class Person implements Greetable {
+//   name: string;
+//   age = 30;
+//
+//   constructor(n: string) {
+//     this.name = n;
+//   }
+//
+//   greet(phrase: string) {
+//     console.log(phrase + ' ' + this.name);
+//   }
+// }
+//
+// let user1: Greetable;
+//
+// user1 = new Person('Bryan');
+// // user1.name = 'Manu';
+//
+// user1.greet('Hi there - I am');
+// console.log(user1);
