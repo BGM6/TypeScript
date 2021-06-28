@@ -13,4 +13,4 @@ literal
 TSC COMMANDS
 tsc --init
 tsc -w
-tsc --target es2015 app.ts
+tsc --target es2015 interfaces.ts
